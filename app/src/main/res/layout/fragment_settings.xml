@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    tools:context=".presentation.fragments.main_menu.SettingsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/settings_fragment_bar"
+        style="@style/MyTopAppBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:title="@string/settings" />
+
+    <include
+        android:id="@+id/settings_fragment_banner"
+        layout="@layout/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_fragment_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_fragment_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorBackground"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/max_width"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/fragment_settings_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fragment_settings_profile_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    style="@style/MyShapeableImageView"
+                    app:srcCompat="@drawable/circle" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_settings_profile_initials"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_white"
+                    android:textSize="40sp"
+                    tools:text="2M" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_settings_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/colorToolbarText"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_settings_profile_picture"
+                tools:text="Firstname Lastname" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_settings_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/colorToolbarText"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_settings_profile_picture"
+                tools:text="user@email.com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:maxWidth="@dimen/max_width"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_notifications"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/sett_bell"
+                    android:text="@string/alerts" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_edit_account"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/sett_edit"
+                    android:text="@string/edit_account" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_log_out"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/sett_door"
+                    android:text="@string/sign_out" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_settings_option_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:background="@drawable/card_background"
+                android:maxWidth="@dimen/max_width">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_settings_option_1_image"
+                    style="@style/OptionIcon"
+                    android:src="@drawable/sett_info" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_settings_option_1_title"
+                    style="@style/OptionTitle"
+                    android:layout_toStartOf="@id/fragment_settings_option_1_chevron"
+                    android:layout_toEndOf="@id/fragment_settings_option_1_image"
+                    android:text="@string/general" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_settings_option_1_description"
+                    style="@style/OptionDescription"
+                    android:layout_below="@id/fragment_settings_option_1_title"
+                    android:layout_toStartOf="@id/fragment_settings_option_1_chevron"
+                    android:layout_toEndOf="@id/fragment_settings_option_1_image"
+                    android:text="@string/show_more" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_settings_option_1_chevron"
+                    style="@style/OptionIcon.Right" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_settings_list_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_app_info"
+                    style="@style/OptionButton"
+                    android:text="@string/about_app"
+                    app:icon="@drawable/sett_file_code" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_rate_us"
+                    style="@style/OptionButton"
+                    android:text="@string/rate_us"
+                    app:icon="@drawable/sett_rate" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_share_app"
+                    style="@style/OptionButton"
+                    android:text="@string/share_app"
+                    app:icon="@drawable/sett_share" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_donate"
+                    style="@style/OptionButton"
+                    android:text="@string/donate"
+                    android:visibility="gone"
+                    app:icon="@drawable/sett_hearth" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_join_discord"
+                    style="@style/OptionButton"
+                    android:text="@string/join_discord"
+                    app:icon="@drawable/sett_discord" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_check_source"
+                    style="@style/OptionButton"
+                    android:text="@string/check_source_code"
+                    app:icon="@drawable/sett_github" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_contact_us"
+                    style="@style/OptionButton"
+                    android:text="@string/contact_us"
+                    app:icon="@drawable/sett_mailbox" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_settings_option_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:background="@drawable/card_background"
+                android:maxWidth="@dimen/max_width">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_settings_option_2_image"
+                    style="@style/OptionIcon"
+                    android:src="@drawable/sett_legal" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_settings_option_2_title"
+                    style="@style/OptionTitle"
+                    android:layout_toStartOf="@id/fragment_settings_option_2_chevron"
+                    android:layout_toEndOf="@id/fragment_settings_option_2_image"
+                    android:text="@string/legal_info" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_settings_option_2_description"
+                    style="@style/OptionDescription"
+                    android:layout_below="@id/fragment_settings_option_2_title"
+                    android:layout_toStartOf="@id/fragment_settings_option_2_chevron"
+                    android:layout_toEndOf="@id/fragment_settings_option_2_image"
+                    android:text="@string/show_more" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_settings_option_2_chevron"
+                    style="@style/OptionIcon.Right" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_settings_list_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_linkedin"
+                    style="@style/OptionButton"
+                    android:text="@string/follow_devs"
+                    app:icon="@drawable/sett_linkedin" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_terms"
+                    style="@style/OptionButton"
+                    android:text="@string/terms"
+                    app:icon="@drawable/sett_file" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_gdpr"
+                    style="@style/OptionButton"
+                    android:text="@string/gdpr"
+                    app:icon="@drawable/sett_file_lock" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragment_settings_open_source"
+                    style="@style/OptionButton"
+                    android:text="@string/open_source_libraries"
+                    app:icon="@drawable/sett_braces" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/WeightLinearLayout" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_settings_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="12sp"
+                tools:text="Version: X.X.X" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/made_by"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/logo_2morrow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

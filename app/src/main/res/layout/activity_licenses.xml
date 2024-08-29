@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.LicensesActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/licenses_activity_bar"
+        style="@style/MyTopAppBar.Back"
+        app:title="@string/open_source_libraries" />
+
+    <ListView
+        android:id="@+id/licenses_activity_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

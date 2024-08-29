@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.main_menu.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_timed"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.main_menu.TimedFragment"
+        android:label="fragment_timed"
+        tools:layout="@layout/fragment_timed" />
+    <fragment
+        android:id="@+id/navigation_articles"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.main_menu.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/navigation_giveaway"-->
+    <!--        android:name="com.tomorrowit.budgetgamer.main_menu.fragments.GiveawayFragment"-->
+    <!--        android:label="fragment_giveaway"-->
+    <!--        tools:layout="@layout/fragment_giveaway" />-->
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.main_menu.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

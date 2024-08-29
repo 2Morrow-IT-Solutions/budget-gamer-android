@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    tools:context=".presentation.fragments.main_menu.ArticlesFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/articles_fragment_bar"
+        style="@style/MyTopAppBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:subtitleCentered="true"
+        app:subtitleTextAppearance="?attr/textAppearanceBodySmall"
+        app:title="@string/articles" />
+
+    <include
+        android:id="@+id/articles_fragment_internet_banner"
+        layout="@layout/internet_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/articles_fragment_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/articles_fragment_banner"
+        layout="@layout/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/articles_fragment_internet_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/articles_fragment_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/articles_fragment_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBackground"
+        android:clipToPadding="false"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingBottom="84dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_article" />
+
+    <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+        android:id="@+id/articles_fragment_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/articles_fragment_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="7dp"
+        android:visibility="visible" />
+
+    <com.tomorrowit.budgetgamer.presentation.custom.ErrorView
+        android:id="@+id/articles_fragment_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/articles_fragment_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="7dp"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/articles_fragment_add"
+        style="@style/MyFab"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

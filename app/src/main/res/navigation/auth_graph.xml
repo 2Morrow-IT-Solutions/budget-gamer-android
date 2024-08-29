@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entry_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_termsFragment"
+            app:destination="@id/termsFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right">
+            <argument
+                android:name="page"
+                android:defaultValue="1"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_welcomeFragment_to_termsFragment_social"
+            app:destination="@id/termsFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right">
+            <argument
+                android:name="page"
+                android:defaultValue="1"
+                app:argType="integer" />
+            <argument
+                android:name="social"
+                android:defaultValue="true"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.WebFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_web">
+        <action
+            android:id="@+id/action_termsFragment_to_gdprFragment_social"
+            app:destination="@id/gdprFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right">
+            <argument
+                android:name="page"
+                android:defaultValue="2"
+                app:argType="integer" />
+            <argument
+                android:name="social"
+                android:defaultValue="true"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/action_termsFragment_to_gdprFragment"
+            app:destination="@id/gdprFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right">
+            <argument
+                android:name="page"
+                android:defaultValue="2"
+                app:argType="integer" />
+        </action>
+        <argument
+            android:name="page"
+            android:defaultValue="1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gdprFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.WebFragment"
+        android:label="fragment_gdpr"
+        tools:layout="@layout/fragment_web">
+        <action
+            android:id="@+id/action_gdprFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right" />
+        <argument
+            android:name="page"
+            android:defaultValue="2"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gdprFragment_to_socialFragment"
+            app:destination="@id/socialFragment"
+            app:enterAnim="@anim/push_in_right"
+            app:exitAnim="@anim/push_out_left"
+            app:popEnterAnim="@anim/push_in_left"
+            app:popExitAnim="@anim/push_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/socialFragment"
+        android:name="com.tomorrowit.budgetgamer.presentation.fragments.auth.SocialFragment"
+        android:label="fragment_social"
+        tools:layout="@layout/fragment_social" />
+</navigation>

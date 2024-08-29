@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    tools:context=".presentation.fragments.auth.WebFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/web_fragment_bar"
+        style="@style/MyTopAppBar.Back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorBackground"
+        app:title="Terms and conditions" />
+
+    <WebView
+        android:id="@+id/web_fragment_webview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@id/web_fragment_accept"
+        android:layout_below="@id/web_fragment_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/screen_margin"
+        android:background="@color/colorBackground" />
+
+    <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+        android:id="@+id/web_fragment_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/web_fragment_accept"
+        android:layout_below="@id/web_fragment_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/screen_margin"
+        android:elevation="7dp"
+        android:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/web_fragment_accept"
+        style="@style/MyButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/screen_margin"
+        android:text="@string/accept"
+        android:visibility="invisible" />
+
+</RelativeLayout>

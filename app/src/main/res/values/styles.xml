@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  region MyImageView styles  -->
+    <style name="MyCircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MyShapeableImageView">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearance">@style/MyCircleImageView</item>
+    </style>
+
+    <!--  region ToolBar  -->
+    <style name="MyTopAppBar" parent="Widget.Material3.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="titleCentered">true</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:background">@color/colorBackgroundSecondary</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="titleTextAppearance">@style/TextAppearance.App.TitleLarge</item>
+    </style>
+
+    <style name="MyTopAppBar.Back">
+        <item name="navigationIcon">@drawable/ic_back</item>
+    </style>
+
+    <style name="TextAppearance.App.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <!--  endregion  -->
+
+    <!--  region EditTexts  -->
+    <style name="MyInputLayout" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundColor">@color/colorEditText</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <style name="MyTextInput" parent="Widget.Material3.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--  endregion  -->
+
+    <!-- region Dialog theme + animation (Slide or fade). -->
+    <style name="DialogTheme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+    <!-- endregion -->
+
+    <!--  region Buttons  -->
+    <style name="MyButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingEnd">30dp</item>
+        <item name="android:minWidth">240dp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_gradient</item>
+        <item name="backgroundTint">@null</item>
+        <item name="elevation">6dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MyButton.Yes" parent="MyButton">
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="MyButton.No" parent="MyButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/button_grey</item>
+        <item name="android:textColor">#7D7F82</item>
+    </style>
+    <!--  endregion  -->
+
+    <!--  region Horizontal button  -->
+    <style name="HorizontalButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@drawable/text_selector</item>
+        <item name="android:drawableTint">@drawable/text_selector</item>
+    </style>
+    <!--  endregion  -->
+
+    <!--  region Options Settings page -->
+    <style name="OptionButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="iconTint">@color/colorToolbarText</item>
+        <item name="iconGravity">start</item>
+    </style>
+
+    <style name="OptionTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="OptionDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="OptionIcon">
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="tint">@color/colorToolbarText</item>
+    </style>
+
+    <style name="OptionIcon.Right" parent="OptionIcon">
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_alignParentStart">false</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:src">@drawable/ic_chevron</item>
+    </style>
+    <!--  endregion -->
+
+    <!--  region Error layout  -->
+    <style name="MyErrorImage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="layout_constraintWidth_max">@dimen/max_width</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:textColor">@color/color_purple</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="MyErrorTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="layout_constraintWidth_max">@dimen/max_width</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_purple</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="MyErrorDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="layout_constraintWidth_max">@dimen/max_width</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <!--  endregion  -->
+
+    <!--  region Dialog layout  -->
+    <style name="MyDialogTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+    </style>
+
+    <style name="MyDialogDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+    </style>
+    <!--  endregion  -->
+
+    <style name="MyProgressBar" parent="@style/Theme.AppCompat">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:indeterminate">true</item>
+        <item name="colorAccent">@color/color_purple</item>
+    </style>
+
+    <!--  region Game Details layout  -->
+    <style name="MyTextLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginStart">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MyTextContent" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginStart">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--  endregion  -->
+
+    <!-- region Game & Article layouts. -->
+    <style name="MyCardView" parent="Widget.Material3.CardView.Filled">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/item_bottom_margin</item>
+        <item name="cardBackgroundColor">@color/colorBackgroundSecondary</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="MyCardViewImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/card_view_image_height</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:background">@color/colorBackgroundSecondary</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="MyCardViewTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginStart">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MyCardViewDescription" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginStart">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/card_view_text_margin</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorToolbarText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Alert layouts. -->
+    <style name="MySwitch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:paddingStart">@dimen/screen_margin</item>
+        <item name="android:paddingEnd">@dimen/screen_margin</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--  endregion  -->
+
+    <!--  region LinearLayouts  -->
+    <style name="WeightLinearLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+    <!--  endregion  -->
+
+    <style name="MyFab" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:elevation">12dp</item>
+        <item name="android:foreground">@drawable/fab_gradient</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+
+</resources>

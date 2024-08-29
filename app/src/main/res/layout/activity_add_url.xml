@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.AddUrlActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/add_url_activity_bar"
+        style="@style/MyTopAppBar.Back"
+        app:title="@string/add_article" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_url_activity_layout"
+                style="@style/MyInputLayout"
+                android:layout_margin="@dimen/screen_margin"
+                android:hint="@string/add_article_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_url_activity_edittext"
+                    style="@style/MyTextInput"
+                    android:importantForAutofill="no"
+                    android:inputType="textUri" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_url_activity_submit"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:text="@string/submit" />
+
+            <WebView
+                android:id="@+id/add_url_activity_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:isScrollContainer="false"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+                android:id="@+id/add_url_activity_loading"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:elevation="7dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

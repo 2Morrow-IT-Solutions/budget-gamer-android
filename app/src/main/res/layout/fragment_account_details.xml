@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".presentation.fragments.edit_account.AccountDetailsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/details_account_bar"
+        style="@style/MyTopAppBar.Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/edit_account" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_account_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintWidth_max="@dimen/max_width">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/edit_account_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/colorToolbarText"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:text="@string/you_are_logged_with" />
+
+            <RelativeLayout
+                android:id="@+id/fragment_account_details_1"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/card_background">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_1_title"
+                    style="@style/OptionTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_1_chevron"
+                    android:text="@string/name" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_1_description"
+                    style="@style/OptionDescription"
+                    android:layout_below="@id/fragment_account_details_1_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_1_chevron"
+                    tools:text="Cool name goes here" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_account_details_1_chevron"
+                    style="@style/OptionIcon.Right"
+                    android:rotation="180" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_account_details_2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/card_background">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_2_title"
+                    style="@style/OptionTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_2_chevron"
+                    android:text="@string/email" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_2_description"
+                    style="@style/OptionDescription"
+                    android:layout_below="@id/fragment_account_details_2_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_2_chevron"
+                    tools:text="Cool email goes here" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_account_details_2_chevron"
+                    style="@style/OptionIcon.Right"
+                    android:rotation="180" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_account_details_3"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/card_background">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_3_title"
+                    style="@style/OptionTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_3_chevron"
+                    android:text="@string/password" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_3_description"
+                    style="@style/OptionDescription"
+                    android:layout_below="@id/fragment_account_details_3_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/fragment_account_details_3_chevron"
+                    android:text="**************" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_account_details_3_chevron"
+                    style="@style/OptionIcon.Right"
+                    android:rotation="180" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_account_details_4"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/card_background">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fragment_account_details_4_title"
+                    style="@style/OptionTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@id/fragment_account_details_4_chevron"
+                    android:text="@string/delete_account"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fragment_account_details_4_chevron"
+                    style="@style/OptionIcon.Right"
+                    android:padding="11dp"
+                    android:rotation="180"
+                    app:tint="@android:color/holo_red_dark" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+        android:id="@+id/fragment_account_details_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="7dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

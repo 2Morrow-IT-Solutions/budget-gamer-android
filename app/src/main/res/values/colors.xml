@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackground">#EFEFF1</color>
+    <color name="colorBackgroundSecondary">#DDDDDF</color>
+
+    <color name="colorDialogBackground">@color/colorBackgroundSecondary</color>
+
+    <color name="colorEditText">#DFE2E7</color>
+
+    <color name="colorToolbarText">@color/color_black</color>
+
+    <color name="vectorDarkGrey">#cbcbcb</color>
+
+    <color name="myButtonDisabled">#c5c6c9</color>
+</resources>
