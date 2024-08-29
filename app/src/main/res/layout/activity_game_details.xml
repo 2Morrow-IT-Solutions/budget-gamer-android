@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.activities.GameDetailsActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_game_details_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/max_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/color_playstation" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/activity_game_details_close"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/colorBackgroundSecondary"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="@dimen/screen_margin"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_game_details_cover">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/activity_game_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="2"
+                android:textColor="@color/colorToolbarText"
+                android:textSize="24sp"
+                tools:text="Grand Theft Auto V: Ultimate edition" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/activity_game_details_provider_logo"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    tools:src="@drawable/logo_steam" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_provider_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_light"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/colorToolbarText"
+                    android:textSize="18sp"
+                    tools:text="Steam" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_game_details_platforms_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_platform" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/activity_game_details_share"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/ic_share"
+                    android:text="@string/share" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/activity_game_details_copy"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/ic_copy"
+                    android:text="@string/copy_link" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/activity_game_details_open"
+                    style="@style/HorizontalButton"
+                    android:drawableTop="@drawable/ic_open_web"
+                    android:text="@string/open_link" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_free_until_label"
+                    style="@style/MyTextLabel"
+                    android:labelFor="@id/activity_game_details_free_until"
+                    android:text="@string/free_until" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_free_until"
+                    style="@style/MyTextContent"
+                    tools:text="DD.MM.YYYY" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/activity_game_details_separator_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_description_label"
+                    style="@style/MyTextLabel"
+                    android:labelFor="@id/activity_game_details_description"
+                    android:text="@string/description" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_description"
+                    style="@style/MyTextContent"
+                    tools:text="Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008's Grand Theft Auto IV, and the fifteenth instalment overall. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three protagonists—retired bank robber Michael De Santa, street gangster Franklin Clinton, and drug dealer and gunrunner Trevor Philips—and their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals. The open world design lets players freely roam San Andreas' open countryside and the fictional city of Los Santos, based on Los Angeles." />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/activity_game_details_separator_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_developer_label"
+                    style="@style/MyTextLabel"
+                    android:labelFor="@id/activity_game_details_developer"
+                    android:text="@string/developer" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_developer"
+                    style="@style/MyTextContent"
+                    tools:text="Cool developer name here" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/activity_game_details_separator_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="@color/colorBackground" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_release_date_label"
+                    style="@style/MyTextLabel"
+                    android:labelFor="@id/activity_game_details_release_date"
+                    android:text="@string/release_date" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/activity_game_details_release_date"
+                    style="@style/MyTextContent"
+                    tools:text="DD.MM.YYYY" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+        android:id="@+id/activity_game_details_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="7dp"
+        android:visibility="visible"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

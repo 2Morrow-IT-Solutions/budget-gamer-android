@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="136dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_subscription_game_margin"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardCornerRadius="@dimen/subscription_game_corner"
+        app:strokeColor="@color/color_playstation"
+        app:strokeWidth="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_subscription_game_provider_background"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@color/colorBackground"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_subscription_game_provider_logo"
+                    android:layout_width="18sp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/logo_playstation"
+                    tools:tint="#000000" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/item_subscription_game_provider_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#000000"
+                    tools:text="PlayStation 5" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_subscription_game_image"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_subscription_game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_light"
+        android:maxLines="1"
+        android:textColor="@color/colorToolbarText"
+        tools:text="This is a nice name for the game that will end if too long" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="license_names">
+        <item>Firebase</item>
+        <item>Firebase Realtime Database</item>
+        <item>Firebase Storage</item>
+        <item>Firebase Authentication</item>
+        <item>Firebase Crashlytics</item>
+        <item>Firebase Analytics</item>
+        <item>Firebase Messaging</item>
+        <item>Firebase Firestore</item>
+        <item>Firebase Dynamic Links</item>
+        <item>Retrofit</item>
+        <item>Gson</item>
+        <item>Okhttp</item>
+        <item>Lottie</item>
+        <item>Coroutines</item>
+        <item>Room</item>
+        <item>Hilt Android</item>
+        <item>Dagger Hilt</item>
+        <item>Coil</item>
+        <item>DataStore</item>
+    </string-array>
+
+    <string-array name="license_links">
+        <item>https://raw.githubusercontent.com/firebase/firebase-android-sdk/master/LICENSE</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-database</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-storage</item>
+        <item>https://raw.githubusercontent.com/firebase/firebase-android-sdk/master/LICENSE</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-crashlytics</item>
+        <item>https://raw.githubusercontent.com/firebase/firebase-android-sdk/master/LICENSE</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-messaging</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-firestore</item>
+        <item>https://github.com/firebase/firebase-android-sdk/tree/master/firebase-dynamic-links</item>
+        <item>https://raw.githubusercontent.com/square/retrofit/master/LICENSE.txt</item>
+        <item>https://raw.githubusercontent.com/google/gson/master/LICENSE</item>
+        <item>https://raw.githubusercontent.com/square/okhttp/master/LICENSE.txt</item>
+        <item>https://raw.githubusercontent.com/airbnb/lottie-android/master/LICENSE</item>
+        <item>https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/master/LICENSE.txt</item>
+        <item>https://github.com/android/codelab-android-room-with-a-view/blob/master/LICENSE</item>
+        <item>https://github.com/android/codelab-android-hilt/blob/main/LICENSE</item>
+        <item>https://github.com/android/codelab-android-dagger-to-hilt/blob/master/LICENSE</item>
+        <item>https://github.com/coil-kt/coil/blob/main/LICENSE.txt</item>
+        <item>https://github.com/android/codelab-android-datastore/blob/master/LICENSE</item>
+    </string-array>
+
+</resources>

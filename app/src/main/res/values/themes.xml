@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.BudgetGamer" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_purple</item>
+        <item name="colorAccent">@color/color_indigo</item>
+
+        <!--This is the navigation bar color change where possible depending on version-->
+        <item name="android:navigationBarColor">@color/colorBackgroundSecondary</item>
+        <item name="android:statusBarColor">@color/colorBackgroundSecondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Basic stuff-->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.BudgetGamer.Clean" parent="Theme.BudgetGamer">
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+    </style>
+
+    <style name="Theme.BudgetGamer.CleanBottom" parent="Theme.BudgetGamer">
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+    </style>
+
+    <style name="Theme.BudgetGamer.Splash" parent="Theme.BudgetGamer.Clean">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

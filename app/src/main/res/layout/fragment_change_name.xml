@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.edit_account.ChangeNameFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/change_name_fragment_bar"
+        style="@style/MyTopAppBar.Back"
+        app:title="@string/change_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/MyInputLayout"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:hint="@string/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/change_name_fragment_field"
+            style="@style/MyTextInput"
+            android:autofillHints="name"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        style="@style/WeightLinearLayout"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/change_name_fragment_submit"
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/screen_margin"
+        android:enabled="false"
+        android:text="@string/submit" />
+
+</LinearLayout>

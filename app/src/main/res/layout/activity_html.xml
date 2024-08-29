@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.HtmlActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/html_activity_bar"
+        style="@style/MyTopAppBar.Back"
+        app:title="Terms and Conditions" />
+
+    <WebView
+        android:id="@+id/html_activity_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:visibility="gone" />
+
+    <com.tomorrowit.budgetgamer.presentation.custom.LoadingView
+        android:id="@+id/html_activity_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="7dp"
+        android:visibility="visible" />
+
+</LinearLayout>

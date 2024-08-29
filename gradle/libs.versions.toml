@@ -1,0 +1,127 @@
+[versions]
+#region Libraries
+material_version = "1.12.0"
+appcompat_version = "1.7.0"
+constraintlayout_version = "2.1.4"
+firebase_bom_version = "33.2.0"
+lottieVersion = "6.1.0"
+playServicesAuthVersion = "21.2.0"
+retrofit_version = "2.11.0"
+okhttp_version = "4.12.0"
+room_version = "2.6.1"
+core_version = "1.13.1"
+coil_version = "2.6.0"
+navigation_version = "2.7.7"
+datastore_version = "1.1.1"
+credentials_version = "1.5.0-alpha04"
+googleidVersion = "1.1.1"
+
+#Testing libraries
+junit = "4.13.2"
+android_junit_version = "1.2.1"
+espresso_core_version = "3.6.1"
+android_x_test_version = "1.6.1"
+mockito_version = "5.12.0"
+mockito_kotlin_version = "5.1.0"
+mockk_version = "1.13.8"
+coroutines_test_version ="1.7.3"
+#endregion
+
+#region Plugins
+gradle_version = "8.5.2"
+ksp_version = "1.9.24-1.0.20"
+crashlytics_version = "3.0.2"
+google_services_version = "4.4.2"
+kotlin_version = "1.9.24"
+hilt_version = "2.49"
+#endregion
+
+[libraries]
+#Lottie
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottieVersion" }
+
+#Play services auth & identity
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
+
+#Credential Manager Google play
+google-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials_version" }
+google-credentials-play-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials_version" }
+google-id = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleidVersion" }
+
+#Core ktx
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core_version" }
+
+#AppCompat
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat_version" }
+
+#Material
+material = { group = "com.google.android.material", name = "material", version.ref = "material_version" }
+
+#Constraint layout
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout_version" }
+
+#Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase_bom_version" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database-ktx" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage-ktx" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx" }
+firebase-dynamic-links = { group = "com.google.firebase", name = "firebase-dynamic-links" }
+
+#Retrofit & Gson for handling JSON file parsing.
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit_version" }
+converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit_version" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp_version" }
+
+#Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room_version" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room_version" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room_version" }
+
+#Dagger-Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt_version" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "hilt_version" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt_version" }
+
+#Coil
+coil-android = { group = "io.coil-kt", name = "coil-base", version.ref = "coil_version" }
+
+#Navigation
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation_version" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation_version" }
+
+#DataStore
+datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore_version" }
+
+#TESTING LIBRARIES
+junit = { module = "junit:junit", version.ref = "junit" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso_core_version" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "android_junit_version" }
+android-test-core = { module = "androidx.test:core", version.ref = "android_x_test_version" }
+mokito-core = { module = "org.mockito:mockito-core", version.ref = "mockito_version" }
+mokito-ktx-core = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito_kotlin_version" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk_version" }
+coroutines_test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines_test_version" }
+
+[bundles]
+firebase = ["firebase-analytics", "firebase-crashlytics", "firebase-auth", "firebase-database", "firebase-storage", "firebase-firestore", "firebase-messaging", "firebase-dynamic-links"]
+retrofit = ["retrofit", "converter-gson", "okhttp"]
+room = ["room-ktx", "room-runtime"]
+navigation = ["navigation-fragment", "navigation-ui"]
+google-auth = ["google-credentials", "google-credentials-play-auth", "google-id"]
+
+
+
+
+[plugins]
+com-android-application = { id = "com.android.application", version.ref = "gradle_version" }
+com-android-library = { id = "com.android.library", version.ref = "gradle_version" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin_version" }
+com-google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "google_services_version" }
+com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt_version" }
+com-google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics_version" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
+

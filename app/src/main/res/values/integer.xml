@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activitySlideOpenTime">300</integer>
+    <integer name="activitySlideCloseTime">300</integer>
+    <integer name="popUpOpenTime">300</integer>
+    <integer name="popUpCloseTime">300</integer>
+
+    <integer name="shortTime">@android:integer/config_shortAnimTime</integer>
+    <integer name="mediumTime">@android:integer/config_mediumAnimTime</integer>
+    <integer name="longtime">@android:integer/config_longAnimTime</integer>
+
+    <integer name="recyclerViewColumns">1</integer>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MyCardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_article_picture"
+            style="@style/MyCardViewImage"
+
+            tools:background="@color/color_purple" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_article_name"
+            style="@style/MyCardViewTitle"
+            tools:text="Counter Strike Global Offensive" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_article_description"
+            style="@style/MyCardViewDescription"
+            tools:text="This is a very long description that I am going to write just to show that I can span over 2 lines on and on and on and on and on" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_article_source"
+            style="@style/MyCardViewDescription"
+            android:layout_marginBottom="@dimen/card_view_text_margin"
+            tools:text="reddit.com" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

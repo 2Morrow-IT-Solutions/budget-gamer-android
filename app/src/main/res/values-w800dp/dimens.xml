@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="subscription_game_corner">5dp</dimen>
+
+    <dimen name="card_corner_radius">6dp</dimen>
+    <dimen name="card_view_image_height">150dp</dimen>
+    <dimen name="card_view_text_margin">10dp</dimen>
+
+    <dimen name="screen_margin">25dp</dimen>
+    <dimen name="item_bottom_margin">12dp</dimen>
+    <dimen name="dialog_margin">50dp</dimen>
+    <dimen name="max_width">450dp</dimen>
+</resources>

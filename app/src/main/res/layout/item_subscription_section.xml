@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_subscription_section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorBackground"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textColor="@color/colorToolbarText"
+        android:textSize="20sp"
+        tools:text="Provider name goes here" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_subscription_section_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:overScrollMode="ifContentScrolls"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_subscription_game" />
+
+</LinearLayout>
