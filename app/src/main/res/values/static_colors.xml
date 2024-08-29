@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_xbox">#007F00</color>
+    <color name="color_playstation">#000069</color>
+    <color name="color_steam">#062157</color>
+    <color name="color_humble_bundle">#D0011B</color>
+    <color name="color_origin">#F36E38</color>
+    <color name="color_gog">#5A2F70</color>
+    <color name="color_epic_games">#2A2A2A</color>
+
+    <color name="color_purple">#694BCE</color>
+    <color name="color_indigo">#7D3297</color>
+
+    <color name="color_black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+
+</resources>

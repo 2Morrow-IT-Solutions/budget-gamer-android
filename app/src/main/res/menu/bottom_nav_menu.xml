@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/menu_home"
+        android:title="@string/home"
+        app:iconTint="@color/color_indigo" />
+
+    <item
+        android:id="@+id/navigation_timed"
+        android:icon="@drawable/menu_calendar"
+        android:title="@string/timed"
+        app:iconTint="@color/color_indigo" />
+
+    <item
+        android:id="@id/navigation_articles"
+        android:icon="@drawable/menu_collection"
+        android:title="@string/articles"
+        app:iconTint="@color/color_indigo" />
+
+    <!--    <item-->
+    <!--        android:id="@+id/navigation_giveaway"-->
+    <!--        android:icon="@drawable/menu_gift"-->
+    <!--        app:iconTint="@color/colorIndigo"-->
+    <!--        android:title="@string/giveaway" />-->
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/menu_settings"
+        android:title="@string/settings"
+        app:iconTint="@color/color_indigo" />
+
+</menu>

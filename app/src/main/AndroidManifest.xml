@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:minSdkVersion="33" />
+
+    <queries>
+        <!-- Query for apps that can handle sending emails -->
+        <!-- We need to mention that we're willing to find email apps specifically after Android 11 -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <!-- This limits the query to email apps by specifying the "mailto" scheme -->
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".common.App"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${applicationLabel}"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.BudgetGamer"
+        android:usesCleartextTraffic="false"
+        tools:replace="android:label">
+        <activity
+            android:name=".presentation.activities.BlockerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BudgetGamer.Clean">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".presentation.activities.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BudgetGamer.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.activities.LicensesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BudgetGamer.CleanBottom" />
+        <activity
+            android:name=".presentation.activities.EditAccountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BudgetGamer.CleanBottom"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.activities.AddUrlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activities.HtmlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activities.GameDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.activities.AuthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BudgetGamer.Clean"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.activities.NotificationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BudgetGamer.CleanBottom" />
+        <activity
+            android:name=".presentation.activities.MainActivity"
+            android:exported="false" />
+
+        <service android:name=".common.services.SyncService" />
+
+        <service
+            android:name=".common.services.MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false"
+            tools:ignore="UnusedAttribute">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_purple" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="free_games_channel" />
+
+    </application>
+
+</manifest>

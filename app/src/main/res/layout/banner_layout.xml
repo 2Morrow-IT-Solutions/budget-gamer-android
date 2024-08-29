@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_purple"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/banner_layout_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="@dimen/screen_margin"
+        android:text="@string/no_login_text"
+        android:textColor="@color/color_white"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/banner_layout_close"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/actionBarItemBackground"
+        android:src="@drawable/ic_close" />
+
+</LinearLayout>

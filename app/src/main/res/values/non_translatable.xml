@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Budget Gamer</string>
+    <string name="app_name_debug" translatable="false">Budget Gamer DEBUG</string>
+    <string name="app_name_staging" translatable="false">Budget Gamer STAGING</string>
+</resources>
